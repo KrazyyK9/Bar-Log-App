@@ -1,0 +1,59 @@
+body {
+    background-color: #D8BDB6;
+}
+
+div {
+    border: 1px solid black;
+    color: #1d1d1d;
+    font-size: large;
+}
+
+span {
+    font-family: 'Cinzel', serif;
+}
+
+button[type=submit] {
+    background-color: #887159;
+    /* font-family: 'Cinzel', serif; */
+}
+
+h1 > a > img {
+    padding-top: 10px;
+    width: 80px;
+    height: 100px;
+}
+
+h1 > a {
+    color: #887159;
+}
+h1 > a:hover {
+    color: #C8BAA6;
+}
+
+/* 
+CLASSES
+*/
+
+.title{
+    font-family: 'Tangerine', cursive;
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+.text {
+    font-family: 'Cinzel', serif;
+    margin-bottom: 2%;
+}
+
+.form-heading {
+    /* ADD FONT */
+}
+
+.btn-primary {
+    background-color: #887159;
+    border: 1px solid #C8BAA6;
+}
+.btn-primary:hover {
+    background-color: #C8BAA6;
+    border: 1px solid #C8BAA6;
+}

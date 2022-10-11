@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row justify-content-center mt-5">
     <div class="col-6">
-      <h2><%= post.title %></h2>
+      <h2 class="title"><%= post.title %></h2>
       <img class="img-fluid" src="<%= post.image%>" />
       <div class="row justify-content-between">
         <form
@@ -28,25 +28,25 @@
       <p><%= post.caption %></p>
     </div>
     <div class="mt-5">
-      <h2>Add comment</h2>
+      <h2 class="form-label">Add comment</h2>
       <form action="/comment/createComment/<%=post._id%>" method="POST">
         <div class="mb-3">
           <!-- <label for="caption" class="form-label">Add comment</label> -->
           <textarea class="form-control" id="comment" name="comment"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" value="Comment">Comment</button>
+        <button type="submit" class="text btn btn-primary" value="Comment">Comment</button>
       </form>
     </div>
     <ul>
     <% for(var i=0; i<comments.length; i++) {%>
       <li class="col-6 justify-content-between mt-5">
-        <%= comments[i].comment %>
+        <%= user.userName %>: <%= comments[i].comment %>
       </li>
     <% } %>
     </ul>
     <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/feed">Return to Feed</a>
+      <a class="text btn btn-primary" href="/profile">Return to Profile</a>
+      <a class="text btn btn-primary" href="/feed">Return to Feed</a>
     </div>
   </div>
 </div>
