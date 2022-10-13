@@ -2,6 +2,9 @@ html {
     height: 100%;
 }
 
+header {
+    padding: 0% !important;
+}
 
 body {
     min-height: 100%;
@@ -19,7 +22,10 @@ span {
 
 button[type=submit] {
     background-color: #8c55eb;
-    /* font-family: 'Cinzel', serif; */
+}
+
+h1 {
+    font-size: 500% !important;
 }
 
 h1 > a > img {
@@ -40,7 +46,7 @@ CLASSES
 */
 
 .navbar {
-    margin-top: 20px;
+    width: 100%;
 }
 
 .body-background {
@@ -51,7 +57,7 @@ CLASSES
 }
 
 .body-background-alt {
-    background-image: url(https://i.ibb.co/BggLTVJ/pylyp-sukhenko-Sr3bhc-Yqft-A-unsplash-EDITED.jpg);
+    background-image: url(https://i.ibb.co/fH5rNFW/pylyp-sukhenko-Sr3bhc-Yqft-A-unsplash-EDITED.jpg);
     background-size: cover;
     border: 2px solid;
     resize: both;
@@ -76,8 +82,10 @@ CLASSES
 }
 
 .text {
+    font-family: 'Noto Serif Gujarati', serif;
     color: white !important;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+    font-size: 100%;
     margin-bottom: 2%;
 }
 
@@ -85,16 +93,16 @@ CLASSES
     font-family: 'Tangerine', cursive;
     color: black;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-    font-size: 200%;
+    font-size: 300%;
     font-weight: bolder;
 }
 
-.uploader {
-    font-family: 'Cinzel', serif;
-}
-
 .form-heading {
-    /* ADD FONT */
+    font-family: 'Noto Serif Gujarati', serif;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-size: 150%;
+    margin-bottom: 30px;
 }
 
 .btn-primary {
