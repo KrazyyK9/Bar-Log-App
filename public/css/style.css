@@ -1,9 +1,14 @@
+html {
+    height: 100%;
+}
+
+
 body {
-    background-color: #D8BDB6;
+    min-height: 100%;
+    background-color: #E2E2E2;
 }
 
 div {
-    border: 1px solid black;
     color: #1d1d1d;
     font-size: large;
 }
@@ -13,7 +18,7 @@ span {
 }
 
 button[type=submit] {
-    background-color: #887159;
+    background-color: #8c55eb;
     /* font-family: 'Cinzel', serif; */
 }
 
@@ -34,15 +39,58 @@ h1 > a:hover {
 CLASSES
 */
 
+.navbar {
+    margin-top: 20px;
+}
+
+.body-background {
+    background-image: url(https://i.ibb.co/pQzj5fH/adam-jaime-dmkmr-Npt-Mpw-unsplash-EDITED.jpg);
+    background-size: cover;
+    border: 2px solid;
+    resize: both;
+}
+
+.body-background-alt {
+    background-image: url(https://i.ibb.co/BggLTVJ/pylyp-sukhenko-Sr3bhc-Yqft-A-unsplash-EDITED.jpg);
+    background-size: cover;
+    border: 2px solid;
+    resize: both;
+}
+
+.login-page {
+    margin-top: 100px;
+}
+
+.logo {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.alert, .alert-danger {
+    color: red !important;
+    background-color: white !important;
+}
+
+.color-theme {
+    background-color: #E2E2E2 !important;
+}
+
+.text {
+    color: white !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+    margin-bottom: 2%;
+}
+
 .title{
     font-family: 'Tangerine', cursive;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     font-size: 200%;
     font-weight: bolder;
 }
 
-.text {
+.uploader {
     font-family: 'Cinzel', serif;
-    margin-bottom: 2%;
 }
 
 .form-heading {

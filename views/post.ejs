@@ -1,10 +1,10 @@
 <%- include('partials/header') -%>
 <div class="container">
   <div class="row justify-content-center mt-5">
-    <div class="col-6">
+    <div class="col-4">
       <h2 class="title"><%= post.title %></h2>
       <img class="img-fluid" src="<%= post.image%>" />
-      <div class="row justify-content-between">
+      <div class="row justify-content-start">
         <form
           class="col-1"
           action="/post/likePost/<%= post.id %>?_method=PUT"
@@ -44,7 +44,7 @@
       </li>
     <% } %>
     </ul>
-    <div class="col-6 mt-5">
+    <div class="d-flex justify-content-center">
       <a class="text btn btn-primary" href="/profile">Return to Profile</a>
       <a class="text btn btn-primary" href="/feed">Return to Feed</a>
     </div>
