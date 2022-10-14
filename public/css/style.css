@@ -47,6 +47,12 @@ CLASSES
 
 .navbar {
     width: 100%;
+    margin-top: 1%;
+    border: 1px solid black;
+}
+
+.navbar-starting-item {
+    margin-left: 50%;
 }
 
 .body-background {
@@ -63,13 +69,21 @@ CLASSES
     resize: both;
 }
 
+.body-background-alt-2 {
+    background-image: url(https://i.ibb.co/fH5rNFW/pylyp-sukhenko-Sr3bhc-Yqft-A-unsplash-EDITED.jpg);
+    background-size: cover;
+    border: 2px solid;
+    resize: both;
+}
+
 .login-page {
     margin-top: 100px;
 }
 
 .logo {
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 70px;
+    max-width: 70px;
+    margin-left: 50%;
 }
 
 .alert, .alert-danger {
