@@ -1,6 +1,67 @@
 <%- include('partials/header') -%>
 <body class="body-background-inapp">
-<div class="container">
+  <div class="container">
+    <div class="row justify-content-left mt-5">
+      <ul class="row list-unstyled">
+          <div class="flex justify-center">
+            
+            <div class="flex flex-col md:flex-row rounded-lg color-theme shadow-lg">
+              <a href="/post/<%= post._id%>"><img class="image-border w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="<%=post.image%>" alt="" /></a>
+
+              <div class="p-6 flex flex-col justify-start">
+                <h5 class="text-gray-900 font-medium mb-2 title"><%=post.title%></h5>
+                <p class="text-gray-700 text-base mb-4">
+                  <%=post.caption%>
+                </p>
+                <p class="text-gray-600 text-xs mb-4">Uploaded on <%=post.createdAt%></p>
+
+                <div class="row justify-content-start">
+                  <form
+                    class="col-3"
+                    action="/post/likePost/<%= post.id %>?_method=PUT"
+                    method="POST"
+                  >
+                    <button class="btn btn-primary fa fa-heart" type="submit"></button>
+                  </form>
+                  <h3 class="col-3">Likes: <%= post.likes %></h3>
+                  <%if(post.user == user.id){ %>
+                  <form
+                    action="/post/deletePost/<%= post.id %>?_method=DELETE"
+                    method="POST"
+                    class="col-3"
+                  >
+                    <button class="btn btn-primary fa fa-trash" type="submit"></button>
+                  </form>
+                  <%}%>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <hr class="my-8 h-px color-theme border-0 dark:bg-gray-700">
+        </ul>
+
+        
+        <div class="mt-5">
+          <h2 class="form-label form-heading">Add comment</h2>
+          <form action="/comment/createComment/<%=post._id%>" method="POST">
+            <div class="mb-3">
+              <textarea class="form-control" id="comment" name="comment"></textarea>
+            </div>
+            <button type="submit" class="text btn btn-primary" value="Comment">Comment</button>
+          </form>
+        </div>
+        <ul>
+        <% for(var i=0; i<comments.length; i++) {%>
+          <li class="col-6 justify-content-between mt-5 text">
+            <%= user.userName %>: <%= comments[i].comment %>
+          </li>
+        <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- <div class="container">
   <div class="row justify-content-center mt-5">
     <div class="col-4">
       <h2 class="title"><%= post.title %></h2>
@@ -32,7 +93,6 @@
       <h2 class="form-label">Add comment</h2>
       <form action="/comment/createComment/<%=post._id%>" method="POST">
         <div class="mb-3">
-          <!-- <label for="caption" class="form-label">Add comment</label> -->
           <textarea class="form-control" id="comment" name="comment"></textarea>
         </div>
         <button type="submit" class="text btn btn-primary" value="Comment">Comment</button>
@@ -46,6 +106,6 @@
     <% } %>
     </ul>
   </div>
-</div>
+</div> -->
 </body>
 <%- include('partials/footer') -%>

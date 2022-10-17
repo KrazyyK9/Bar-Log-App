@@ -114,6 +114,10 @@ CLASSES
     margin-bottom: 2%;
 }
 
+.image-border {
+    padding: 30px 10px;
+}
+
 .title{
     font-family: 'Tangerine', cursive;
     color: black;
